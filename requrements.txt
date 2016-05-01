@@ -1,0 +1,4 @@
+Django==1.9.5
+python-telegram-bot==4.0.2
+requests==2.10.0
+rmr-django==1.0.27

@@ -105,3 +105,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+# Telegram bot settings
+
+TELEGRAM_BOT_TOKEN = '118027571:AAEWkEBU9tYBQS1WHtYbZcEf7eCY8QgPaGE'
+TELEGRAM_API = 'https://api.telegram.org/bot{}/'.format(TELEGRAM_BOT_TOKEN)
