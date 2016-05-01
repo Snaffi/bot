@@ -14,12 +14,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url
-from django.core.urlresolvers import reverse
 
-from bot.views import UserList, Auth
+from bot.views.users import UserList, Auth
 
 urlpatterns = [
     url(r'^users/$', UserList.as_view(), name='user_list'),
     url(r'^users/auth$', Auth.as_view(), name='auth'),
-    url(r'^users/(?P<user_id>\d+)/$', 'bot.views.user_details', name='user_details')
+    url(r'^users/(?P<user_id>\d+)/$', 'bot.views.users.user_details', name='user_details')
 ]

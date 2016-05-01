@@ -1,21 +1,10 @@
 import rmr.views
 from django.contrib.auth import authenticate, login
-
 from django.contrib.auth.models import User
-from django.core.urlresolvers import reverse
 from django.http import JsonResponse
 from django.shortcuts import get_object_or_404
 
-
-def user_to_json(user: User):
-    return {
-        'id': user.id,
-        'email': user.email,
-        'username': user.username,
-        'last_name': user.last_name,
-        'first_name': user.first_name,
-        'url': reverse('user_details', kwargs={'user_id': user.id})
-    }
+from bot.views import user_to_json
 
 
 class UserList(rmr.views.Json):
